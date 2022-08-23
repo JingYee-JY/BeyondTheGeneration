@@ -240,7 +240,7 @@ button{
   }
 
   /*mobile  & ipad horizontal*/
-  @media screen and (min-width:850px)and (max-width:1180px) {
+  @media screen and (min-width:850px){
     .game-container {
         position: relative;
         width: 55vmin;

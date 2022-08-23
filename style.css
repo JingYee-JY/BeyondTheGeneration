@@ -41,6 +41,9 @@ button{
 .startbtn{
     width: 30vh;
 }
+.againbtn{
+    width: 40vh;
+}
 .btn{
     width: 30vh;
 }
@@ -139,9 +142,89 @@ button{
   .instruction{
     width: 40vh;
   }
+  .end{
+    width: 35vh;
+}
+
+/*mobile horizontal*/
+@media screen and (max-width:360px) {
+    .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 22vh;
+    height: 20vh;
+    border-radius: 5vmin;
+    display: flex;
+    color: #F8E7D4;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-image {
+    position: absolute;
+    border-radius: 5px;
+    width: 20vh;
+    height: 19vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-logo{
+    position: absolute;
+    border-radius: 5px;
+    width: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  }
+/*mobile vertical*/
+@media screen and (min-width:380px) and (max-width:414px) {
+    .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 22vh;
+    height: 20vh;
+    border-radius: 5vmin;
+    display: flex;
+    color: #F8E7D4;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-image {
+    position: absolute;
+    border-radius: 5px;
+    width: 20vh;
+    height: 19vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  .card-logo{
+    position: absolute;
+    border-radius: 5px;
+    width: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+  }
 
   /*mobile horizontal*/
-  @media screen and (min-width:667px)and (max-width:819px) {
+  @media screen and (min-width:667px)and (max-width:844px) {
     .game-container {
         position: relative;
         width: 55vmin;
@@ -151,17 +234,17 @@ button{
   }
 
   /*mobile  & ipad horizontal*/
-  @media screen and (min-width:900px)and (max-width:1180px) {
+  @media screen and (min-width:850px)and (max-width:1180px) {
     .game-container {
         position: relative;
-        width: 50vmin;
+        width: 55vmin;
         height: 65vh;
         display: grid;
       }
   }
 
      /*ipad vertical*/
-     @media screen and (min-width:820px) and (max-width:900px) {
+     @media screen and (min-width:820px) and (max-width:843px) {
 .game-container {
     position: relative;
     width: 80%;
@@ -183,7 +266,6 @@ button{
     backface-visibility: hidden;
   }
     }
-
     /*ipad vertical*/
     @media screen and (min-width:765px) and (max-width:800px) {
         .game-container {

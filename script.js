@@ -2,6 +2,8 @@ const startButton = document.querySelector(".startButton")
 const start = document.querySelector(".start")
 const game = document.querySelector(".game")
 const gameContainer = document.querySelector(".game-container");
+const playAgain = document.querySelector(".playAgain")
+const final = document.querySelector(".final");
 
 let firstCard;
 let secondCard;
@@ -17,6 +19,12 @@ const items = [
 
 startButton.addEventListener("click", () => {
     start.classList.add("hide")
+    game.classList.remove("hide")
+    initializer();
+})
+
+playAgain.addEventListener("click", () => {
+    final.classList.add("hide")
     game.classList.remove("hide")
     initializer();
 })
@@ -88,14 +96,7 @@ const generateRandom = (size = 2) => {
               if (winCount == Math.floor(cardValues.length / 2)) {
                 let delay = setTimeout(() => {
                   final.classList.remove("hide")
-                  wrapper.classList.add("hide")
-                result.innerHTML = `
-                <div>
-                <img class="Finaltitle" src="./img/finalTitle.png">
-                </div>
-                <div>
-                <img class="resize" src="./img/goodJob.png">
-                </div>`;
+                  game.classList.add("hide")
                 }, 900); 
               }
             } else {

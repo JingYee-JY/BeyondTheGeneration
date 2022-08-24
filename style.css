@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding-top: 15px;
 }
 
@@ -87,6 +87,7 @@ button{
   margin-bottom: 60px;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .card-before, .card-after {
@@ -165,7 +166,7 @@ button.playAgain{
 .final .end{
   display: flex;
   margin: 0 auto;
-  max-width: 75%;
+  max-width: 60%;
 }
 
 button.playAgain{
@@ -175,6 +176,17 @@ button.playAgain{
 .hide{
   display: none;
   visibility: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.game .logo, .final .logo{
+  max-width: 100px;
+}
+.game .zone, .final .zone {
+  max-width: 60px;
 }
 
 /*ipad*/

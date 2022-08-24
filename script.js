@@ -14,7 +14,8 @@ const items = [
     { name: "RedPacket", image: "./img/Red Packet.png" },
     { name: "FeatherDuster", image: "./img/Feather Duster.png" },
     { name: "SewingMachine", image: "./img/Sewing Machine.png" },
-    { name: "WeddingBasket", image: "./img/Wedding Basket.png" }
+    { name: "WeddingBasket", image: "./img/Wedding Basket.png" },
+    { name: "PiggyBank", image: "./img/Piggy Bank.png" }
   ];
 
 startButton.addEventListener("click", () => {

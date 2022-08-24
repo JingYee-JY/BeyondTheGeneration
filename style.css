@@ -69,6 +69,14 @@ button{
   margin: 0;
 }
 
+.conatainer{
+  width: 99%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .game-container {
   width: 98%;
   height: 100%;

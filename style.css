@@ -115,8 +115,8 @@ button{
 .card-image {
   position: absolute;
   border-radius: 5px;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

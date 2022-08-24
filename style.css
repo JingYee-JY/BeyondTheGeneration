@@ -76,7 +76,7 @@ button{
   display: grid;
   gap: 3%;
   row-gap: 10%;
-  grid-template-rows:repeat(3, calc(100% - -25px));
+  grid-template-rows:repeat(3, calc(100% - -5px));
 }
 
 .card-container {
@@ -200,14 +200,6 @@ button {
   .instruction{
       font-size: 32px;
   }
-  .game-container {
-    width: 98%;
-    height: 100%;
-    margin: 0;
-    display: grid;
-    gap: 2%;
-    grid-template-rows:repeat(3,250px);
-  }
   .card-image{
       max-width: 500px;
       margin: 0 auto;
@@ -217,6 +209,15 @@ button {
   }
   .final .end{
       max-width: 450px;
+  }
+  .game-container {
+    width: 98%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    gap: 3%;
+    row-gap: 10%;
+    grid-template-rows:repeat(3, calc(100% - -80px));
   }
 }
 

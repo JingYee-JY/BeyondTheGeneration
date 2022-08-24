@@ -110,6 +110,7 @@ button{
     justify-content: center;
     transition: transform 0.7s ease-out;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
 .card-image {
@@ -246,7 +247,7 @@ button {
       max-width: 450px;
   }
   .game-container {
-    width: 98%;
+    width: 100%;
     height: 100%;
     margin: 0;
     display: grid;

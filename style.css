@@ -85,7 +85,7 @@ button{
   display: grid;
   gap: 3%;
   row-gap: 10%;
-  grid-template-columns:repeat(2, calc(100% - -5px));
+  justify-content: center;
   grid-template-rows:repeat(3, calc(100% - -5px));
 }
 

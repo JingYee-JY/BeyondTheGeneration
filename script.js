@@ -64,8 +64,11 @@ const generateRandom = (size = 2) => {
        </div>
        `;
     }
+    let border = gameContainer.getBoundingClientRect();
+    cell = Math.floor((border.width - 5) / 3 + 50)
+    console.log(cell)
     //Grid
-    gameContainer.style.gridTemplateColumns = `repeat(${size},auto)`;
+    gameContainer.style.gridTemplateColumns = `repeat(${size},${cell}px)`;
   
     //Cards
     cards = document.querySelectorAll(".card-container");

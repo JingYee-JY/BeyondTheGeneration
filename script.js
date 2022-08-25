@@ -10,12 +10,12 @@ let secondCard;
 
 //Items array
 const items = [
-    { name: "CassetteTapePlayer", image: "./img/Cassette Tape Player.png" },
-    { name: "RedPacket", image: "./img/Red Packet.png" },
-    { name: "FeatherDuster", image: "./img/Feather Duster.png" },
-    { name: "SewingMachine", image: "./img/Sewing Machine.png" },
-    { name: "WeddingBasket", image: "./img/Wedding Basket.png" },
-    { name: "PiggyBank", image: "./img/Piggy Bank.png" }
+    { name: "CassetteTapePlayer", image: "./img/CassetteTapePlayer.png" },
+    { name: "RedPacket", image: "./img/RedPacket.png" },
+    { name: "FeatherDuster", image: "./img/FeatherDuster.png" },
+    { name: "SewingMachine", image: "./img/SewingMachine.png" },
+    { name: "WeddingBasket", image: "./img/WeddingBasket.png" },
+    { name: "PiggyBank", image: "./img/PiggyBank.png" }
   ];
 
 startButton.addEventListener("click", () => {

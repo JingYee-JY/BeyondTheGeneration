@@ -5,6 +5,7 @@ const gameContainer = document.querySelector(".game-container");
 const playAgain = document.querySelector(".playAgain")
 const final = document.querySelector(".final");
 
+let startGame;
 let firstCard;
 let secondCard;
 
@@ -18,9 +19,14 @@ const items = [
     { name: "PiggyBank", image: "./img/PiggyBank.png" }
   ];
 
+  document.addEventListener('dblclick', function(event) {
+    event.preventDefault();
+    }, { passive: false });
+
 startButton.addEventListener("click", () => {
     start.classList.add("hide")
     game.classList.remove("hide")
+    startGame = false
     initializer();
 })
 
@@ -64,18 +70,13 @@ const generateRandom = (size = 2) => {
        </div>
        `;
     }
-    let border = gameContainer.getBoundingClientRect();
-    cell = Math.floor((border.width - 5) / 3 + 50)
-    console.log(cell)
-    //Grid
-    gameContainer.style.gridTemplateColumns = `repeat(${size},${cell}px)`;
   
     //Cards
     cards = document.querySelectorAll(".card-container");
     cards.forEach((card) => {
       card.addEventListener("click", () => {
         //If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
-        if (!card.classList.contains("matched")) {
+        if (!card.classList.contains("matched") && startGame == true && !card.classList.contains("flipped")) {
           //flip the cliked card
           card.classList.add("flipped");
           //if it is the firstcard (!firstCard since firstCard is initially false)
@@ -98,6 +99,7 @@ const generateRandom = (size = 2) => {
               winCount += 1;
               //check if winCount ==half of cardValues
               if (winCount == Math.floor(cardValues.length / 2)) {
+                startGame = false
                 let delay = setTimeout(() => {
                   final.classList.remove("hide")
                   game.classList.add("hide")
@@ -118,7 +120,30 @@ const generateRandom = (size = 2) => {
         }
       });
     });
+    opening()
   };
+
+  function opening(){
+    let Opendelay = setTimeout(() => {
+      cards.forEach((card) => {
+        card.classList.add("flipped"); 
+      })
+    }, 200);
+    let Closedelay = setTimeout(() => {
+      closing()
+    }, 2000);
+  }
+
+  function closing(){
+    cards.forEach((card) => {
+      card.classList.remove("flipped");
+    })
+    let delay = setTimeout(() => {
+      startGame = true
+      firstCard = null
+      secondCard = null
+    }, 500);
+  }
 
     //Initialize values and func calls
 const initializer = () => {

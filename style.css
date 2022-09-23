@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ECECEC;
+  overflow: hidden;
 }
 
 *{
@@ -15,31 +16,37 @@ body {
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 100vh;
+ 
 }
 
 .top{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 60px;
-  padding-top: 15px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.final .top{
+  margin-bottom: 30px;
 }
 
 .logo, .zone{
   max-width: 150px;
-  padding-left: 15px
+  padding-left: 20px
 }
 
 .game-title{
-  margin-top: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   
 }
 
 .title{
-  width: 100%;
-  padding: 5%;
-  box-sizing: border-box;
+  display: flex;
+  margin: 0 auto;
+  max-width: 60%;
+  padding: 0;
 }
 
 button{
@@ -50,7 +57,7 @@ button{
 }
 
 .cover-bottom{
-  margin-top: auto;
+  margin-top: 30px;
 }
 
 .cover-bottom img{
@@ -84,10 +91,10 @@ button{
   height: 100%;
   margin: 0;
   display: grid;
-  gap: 3%;
-  row-gap: 10%;
+  gap: 10px;
   justify-content: center;
-  grid-template-rows:repeat(3, calc(100% - -5px));
+  grid-template-columns: repeat(2,150px);
+  grid-template-rows:repeat(3, 150px);
 }
 
 .card-container {
@@ -117,7 +124,7 @@ button{
 .card-image {
   position: absolute;
   border-radius: 5px;
-  width: 80%;
+  width: 70%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,6 +170,7 @@ button{
 }
 
 .matched{
+	transition: 2s;
   opacity: 40%;
 }
 
@@ -189,7 +197,7 @@ img.btn{
   width: 100%;
 }
 
-button.playAgain{
+button.playAgain,.nextZone{
   max-width: 75%;
   display: flex;
   margin: 0 auto;
@@ -208,10 +216,11 @@ button.playAgain{
   display: flex;
   margin: 0 auto;
   max-width: 60%;
+  margin-top: 30px;
 }
 
 button.playAgain{
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .hide{
@@ -227,7 +236,7 @@ button {
   max-width: 100px;
 }
 .game .zone, .final .zone {
-  max-width: 60px;
+  max-width: 120px;
 }
 
 /*ipad*/
@@ -242,8 +251,9 @@ button {
       font-size: 32px;
   }
   .card-image{
-      max-width: 500px;
+      max-width: 60%;
       margin: 0 auto;
+      
   }
   button.playAgain{
       max-width: 450px;
@@ -256,30 +266,49 @@ button {
     height: 100%;
     margin: 0;
     display: grid;
-    gap: 3%;
-    row-gap: 10%;
-    grid-template-columns:repeat(2, calc(100% - -80px));
-    grid-template-rows:repeat(3, calc(100% - -80px));
+    gap: 30px;
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows:repeat(3, 300px);
+  }
+  .game .logo, .final .logo{
+    max-width: 150px;
+  }
+  .game .zone, .final .zone {
+    max-width: 150px;
   }
 }
 
 /*desktop*/
 @media screen and (min-width:1200px){
   .start, .game, .final{
-      max-width: 500px;
+      max-width: 400px;
       margin: 0 auto;
   }
-  button.playAgain{
-      max-width: 260px;
+  button.playAgain,.startbtn, .nextZone{
+      max-width: 200px;
   }
-  .startbtn{
-      max-width: 260px;
+  .cover-bottom{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .cover-bottom img{
+    width: 90%;
   }
   .card-image{
       max-width: 360px;
       margin: 0 auto;
   }
   .final .end{
-      max-width: 326px;
+      max-width: 200px;
+      margin-top: 20px;
+  }
+  button.playAgain{
+    margin-top: 5px;
+    padding-bottom: 0;
+  }
+  .game-container{
+    grid-template-columns: repeat(2,130px);
+    grid-template-rows:repeat(3, 130px);
   }
 }
